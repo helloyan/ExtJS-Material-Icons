@@ -1,54 +1,15 @@
 # Material icons for ExtJS
 
-ExtJS package to use [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font/index.html) in a ExtJS application or workspace by Richard Styles.
+classic版本的material icon
 
-Current version of Material Design Icons: 2.2.0
+fork 自[ExtJS-Material-Icons](https://github.com/RichardStyles/ExtJS-Material-Icons)
 
-## Adding package to workspace or app
-Download [material-icon.pkg](https://github.com/RichardStyles/ExtJS-Material-Icons/releases/) from releases [1.0.0]
+将 [material-design-color-palette.css](https://github.com/zavoloklom/material-design-color-palette/tree/master/css) 合并了进去
 
-copy: .pkg file to workspace of your project
-
-run: ```sencha package add material-icons.pkg```
-
-add 'material-icons' to your app.json
-
-```
-   "requires": [
-      "font-awesome",
-      "material-icons"
-   ],
-```
-run: ```sencha app refresh```
-
-## Usage
-
-Just like using font awesome you must use the css ```x-mi``` class before the material icon class you wish to use.
-
-#### Important 
-The class names have been updated from **zmdi** to **mi** when converting the css from the Material Design Iconic Font to scss for compiling with Sencha cmd.
-
-```
-zmdi zmdi-rss
-```
-Becomes
-
-```
-x-mi mi-rss
-```
-All classes should be prefixed using ```x-mi``` and the icon specific css class should begin with ```mi-``` instead of ```zmdi-```.
-
-#### Example 
-
-```
-iconCls: "x-mi mi-rss"
-```
-
-## Licences
-* All licences for Fonts and code from [Material Design Iconic Font by Sergey Kupletsky](http://zavoloklom.github.io/material-design-iconic-font/index.html).  remain valid. See [here for licence infomation](http://zavoloklom.github.io/material-design-iconic-font/license.html) for the fonts used in this package. 
-* Code for ExtJS package release under MIT
-
-## About
-This package was created to allow additional fonts to be used, just like font-awesome.
-
-ExtJS Package built by [Richard Styles](https://twitter.com/camerastyles).
+## 用法
+1. clone项目
+2. 新建一个workspace，sencha.exe -sdk ext-6.2.0 generate workspace ext-workspace，将上述整个项目移到 ext-workspace\packages\local下
+3. 到项目目录下执行   sencha package repo init -name "Your Name" -email "support@mycompany.com"初始化发布信息，修改package.json里的creator与name一致，再执行sencha.exe package build
+4. 到ext-workspace\build\material-icons\找到material-icons.pkg，拷贝到需要引用的项目目录下
+5. 新项目下执行 sencha.exe package add material-icons.pkg
+6. 执行上述动作后，不要立即删除pkg，执行以下 sencha app watch,会自动将pkg解压到 packages\remote\material-icons目录，然后就可以安全删除了
