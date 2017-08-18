@@ -13,3 +13,4 @@ fork 自[ExtJS-Material-Icons](https://github.com/RichardStyles/ExtJS-Material-I
 4. 到ext-workspace\build\material-icons\找到material-icons.pkg，拷贝到需要引用的项目目录下
 5. 新项目下执行 sencha.exe package add material-icons.pkg
 6. 执行上述动作后，不要立即删除pkg，执行以下 sencha app watch,会自动将pkg解压到 packages\remote\material-icons目录，然后就可以安全删除了
+7. 其他的使用方法请参考[源](http://zavoloklom.github.io/material-design-iconic-font/examples.html)
