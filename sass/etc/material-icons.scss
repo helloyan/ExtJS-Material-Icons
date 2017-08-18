@@ -5,9 +5,9 @@
  *  Material Design Iconic Font by Sergey Kupletsky (@zavoloklom) - http://zavoloklom.github.io/material-design-iconic-font/
  *  License - http://zavoloklom.github.io/material-design-iconic-font/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-$mi-path:                        "../font" !default;
-$mi-css-prefix:                  mi !default;
-$mi-font-family:                 'Material-Design-Iconic-Font' !default;
+$mi-path: "../font" !default;
+$mi-css-prefix: mi !default;
+$mi-font-family: 'Material-Design-Iconic-Font' !default;
 
 @font-face {
   font-family: '#{$mi-font-family}';
@@ -15,16 +15,16 @@ $mi-font-family:                 'Material-Design-Iconic-Font' !default;
   font-weight: 400;
   src: url('#{$mi-path}/#{$mi-font-family}.eot'); /* For IE6-8 */
   src: local('#{$mi-font-family}'),
-		url('#{$mi-path}/#{$mi-font-family}.woff2') format('woff2'),
-		url('#{$mi-path}/#{$mi-font-family}.woff') format('woff'),
-		url('#{$mi-path}/#{$mi-font-family}.ttf') format('truetype'),
-		url('#{$mi-path}/#{$mi-font-family}.svg#weather_iconsregular') format('svg');
+  url('#{$mi-path}/#{$mi-font-family}.woff2') format('woff2'),
+  url('#{$mi-path}/#{$mi-font-family}.woff') format('woff'),
+  url('#{$mi-path}/#{$mi-font-family}.ttf') format('truetype'),
+  url('#{$mi-path}/#{$mi-font-family}.svg#weather_iconsregular') format('svg');
 }
 
 .#{$mi-css-prefix} {
   display: inline-block;
   font: normal normal normal 14px/1 '#{$mi-font-family}';
-  font-size: inherit;
+  font-size: 16px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,3 +33,4 @@ $mi-font-family:                 'Material-Design-Iconic-Font' !default;
 @import 'util.scss';
 @import 'classes.scss';
 @import "material-design-color-palette.scss";
+@import "animate.scss";
